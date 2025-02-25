@@ -10,11 +10,14 @@ public class Main {
             // Create Table
             //CreateTable.createTable();
 
+            //Show Table From Database
+            ShowTable.showTable();
+
             //Insert Data Into Table
             //InsertData.insertData();
 
             //Delete Data From Table
-            DeleteData.deleteData();
+            //DeleteData.deleteData();
 
             //Update Data From Table
             //UpdateData.updateData();
