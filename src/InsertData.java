@@ -11,15 +11,16 @@ public class InsertData {
 
                 Connection conn = ConnectDB.getConnection();
 
-                String q = "INSERT INTO studentInfo VALUES(?,?)";
+                String q = "INSERT INTO studentInfo (id, name) VALUES(?,?)";
 
+                assert conn != null;
                 PreparedStatement ps = conn.prepareStatement(q);
 
                 Scanner sc = new Scanner(System.in);
 
                 System.out.print("Enter Id: ");
                 int id = sc.nextInt();
-
+                sc.nextLine();
                 System.out.print("Enter Name: ");
                 String name  = sc.nextLine();
 

@@ -12,18 +12,22 @@ public class UpdateData {
 
             Scanner sc = new Scanner(System.in);
 
-
-            System.out.print("Enter Name: ");
-            String name = sc.nextLine();
-
             System.out.print("Enter Id: ");
             int id = sc.nextInt();
+            System.out.print("Enter New Name: ");
+            String name = sc.nextLine();
+
 
             ps.setString(1,name);
             ps.setInt(2,id);
 
             int affectedRows = ps.executeUpdate();
-            System.out.println("Updated row = " + affectedRows);
+            if(affectedRows>0){
+                System.out.println("Updated row = " + affectedRows);
+                return;
+            }
+            System.out.println("Data Not Found On This Id");
+
         }catch (Exception e){
             System.out.println(e);
         }

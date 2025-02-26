@@ -12,7 +12,7 @@ public class ConnectDB {
 
            // Establish connection with mysql database
            Connection conn =  DriverManager.getConnection(
-                   "jdbc:mysql://localhost:3306/myJava", "root", "123"
+                   "jdbc:mysql://localhost:3306/myJava", "root", "Shamsher@mysql"
            );
            System.out.println("Database connected successfully");
 
